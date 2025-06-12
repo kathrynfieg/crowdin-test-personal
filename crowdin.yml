@@ -1,0 +1,3 @@
+files:
+  - source: /src/i18n/locales/en-US.ts
+    translation: /%original_path%/%locale%.ts
