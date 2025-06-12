@@ -1,30 +1,37 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { useTranslation } from "./useTranslation"
+import { availableLanguages } from "./i18n"
+
+const { t, locale } = useTranslation()
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div class="locale-switcher">
+      <select v-model="locale">
+        <option v-for="lang in availableLanguages" :key="lang" :value="lang">
+          {{ lang }}
+        </option>
+      </select>
+    </div>
+    <h1>{{ t("greeting") }}</h1>
+    <p>{{ t("welcome_text") }}</p>
+    <button>{{ t("button_labels.submit_button") }}</button>
+    <!-- <p>{{ t("this_shoulnt_exist") }}</p> -->
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.locale-switcher {
+  margin-bottom: 1rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  font-size: 1rem;
 }
 </style>
