@@ -1,19 +1,19 @@
-export const esES = {
-  greeting: "Hola",
-  farewell: "Adiós",
-  welcome_text: "Bienvenido a nuestra aplicación!",
+export const enUS = {
+  greeting: "Hello",
+  farewell: "Goodbye",
+  welcome_text: "Welcome to our application!",
   error_messages: {
-    network_error: "Ocurrió un error de red.",
-    not_found: "El recurso solicitado no se encontró.",
-    unauthorized: "No tienes permisos para ver esta página.",
-    server_error: "Error interno del servidor. Por favor, inténtalo de nuevo más tarde.",
-    timeout_error: "La solicitud expiró."
+    network_error: "Network error occurred.",
+    not_found: "The requested resource was not found.",
+    unauthorized: "You are not authorized to view this page.",
+    server_error: "Internal server error. Please try again later.",
+    timeout_error: "The request timed out."
   },
   button_labels: {
-    submit_button: "Envía",
-    cancel_button: "Cancelar",
-    save_button: "Guardar",
-    delete_button: "Eliminar",
-    edit_button: "Editar"
-  },
+    submit_button: "Submit",
+    cancel_button: "Cancel",
+    save_button: "Save",
+    delete_button: "Delete",
+    edit_button: "Edit"
+  }
 };
